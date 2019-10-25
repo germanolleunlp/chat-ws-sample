@@ -10,7 +10,7 @@ services:
       - /usr/app/node_modules
     ports:
       - "4000:4000"
-    env_file: ./server/.env
+    # env_file: ./server/.env # Uncomment to load your own .env
     environment:
       - NODE_ENV=development
   client:
