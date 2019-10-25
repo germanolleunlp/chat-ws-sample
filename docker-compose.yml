@@ -1,0 +1,26 @@
+version: "3.2"
+
+services:
+  server:
+    build:
+      context: ./server/
+    command: /usr/app/node_modules/.bin/nodemon src/index.js --exec babel-node
+    volumes:
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "4000:4000"
+    env_file: ./server/.env
+    environment:
+      - NODE_ENV=development
+  client:
+    build:
+      context: ./client/
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"

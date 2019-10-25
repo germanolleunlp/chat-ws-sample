@@ -1,0 +1,31 @@
+type User {
+  id: Int!
+  name: String!
+  initials: String!
+}
+
+type Conversation {
+  id: Int!
+  owner: User!
+  messages: [Message!]!
+}
+
+type Message {
+  id: ID!
+  text: String!
+  conversation: Conversation!
+  author: User!
+}
+
+type Query {
+  conversations: [Conversation]!
+  conversation(id: Int!): Conversation!
+}
+
+type Mutation {
+  addMessage(conversationId: Int!, authorId: Int!, text: String!): Message!
+}
+
+type Subscription {
+  messageAdded(conversationId: Int!): Message
+}
