@@ -39,6 +39,30 @@ const messages = [
     text: faker.lorem.text(),
     conversationId: conversation_one.id,
     authorId: german_olle.id
+  },
+  {
+    id: faker.random.uuid(),
+    text: faker.lorem.text(),
+    conversationId: conversation_one.id,
+    authorId: german_olle.id
+  },
+  {
+    id: faker.random.uuid(),
+    text: faker.lorem.text(),
+    conversationId: conversation_one.id,
+    authorId: carolina_dutto.id
+  },
+  {
+    id: faker.random.uuid(),
+    text: faker.lorem.text(),
+    conversationId: conversation_one.id,
+    authorId: carolina_dutto.id
+  },
+  {
+    id: faker.random.uuid(),
+    text: faker.lorem.text(),
+    conversationId: conversation_one.id,
+    authorId: german_olle.id
   }
 ];
 
