@@ -6,9 +6,6 @@ import Subscription from "./resolvers/Subscription";
 import Conversation from "./resolvers/Conversation";
 import Message from "./resolvers/Message";
 
-const PORT = process.env.PORT || 4000;
-const HOST = "0.0.0.0";
-
 const pubsub = new PubSub();
 
 const server = new GraphQLServer({
@@ -27,8 +24,8 @@ const server = new GraphQLServer({
 });
 
 const options = {
-  port: PORT,
-  host: HOST,
+  port: 4000,
+  host: "0.0.0.0",
   endpoint: "/graphql",
   subscriptions: "/graphql",
   playground: "/"
