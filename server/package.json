@@ -13,7 +13,7 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
-    "aws-sdk": "^2.556.0",
+    "aws-sdk": "^2.814.0",
     "faker": "^4.1.0",
     "graphql-yoga": "^1.18.3",
     "kill-port": "^1.6.0",
